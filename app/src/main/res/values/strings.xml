@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">AndyDemo</string>
+
+    <string name="activity_hello_world">app/Activity/<b>Hello <i>World</i></b></string>
+    <string name="hello_world"><b>Hello, <i>World!</i></b></string>
+
+    <string name="activity_timber">log/<b>Timber</b></string>
+    <string name="timber"><b>Hello, <i>Timber!</i></b></string>
+
+    <string name="activity_debugdrawer">debug/<b>DebugDrawer</b></string>
+    <string name="debugdrawer"><b>Hello, <i>DebugDrawer!</i></b></string>
+</resources>

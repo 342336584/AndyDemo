@@ -1,0 +1,48 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.1"
+    defaultConfig {
+        applicationId "com.example.andy.andydemo"
+        minSdkVersion 21
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+boolean isDeveloperVersion() {
+    return true;
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:26.+'
+    testCompile 'junit:junit:4.12'
+
+    compile 'com.jakewharton.timber:timber:+'
+    // 侧滑调试面板
+    if (isDeveloperVersion()) {
+        compile ('io.palaima.debugdrawer:debugdrawer:+') {
+            exclude group: 'com.android.support'
+        }
+    } else {
+        compile ('io.palaima.debugdrawer:debugdrawer-no-op:+') {
+            exclude group: 'com.android.support'
+        }
+    }
+    compile ('io.palaima.debugdrawer:debugdrawer-timber:+') {
+        exclude group: 'com.android.support'
+    }
+}
