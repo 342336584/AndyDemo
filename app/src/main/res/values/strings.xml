@@ -9,4 +9,6 @@
 
     <string name="activity_debugdrawer">debug/<b>DebugDrawer</b></string>
     <string name="debugdrawer"><b>Hello, <i>DebugDrawer!</i></b></string>
+
+    <string name="activity_includemergeviewstubactivity">layout/<b>IncludeMergeViewStub</b></string>
 </resources>
