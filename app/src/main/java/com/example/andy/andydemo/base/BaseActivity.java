@@ -7,7 +7,6 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.Toast;
 
-import com.android.debug.hv.ViewServer;
 import com.example.andy.andydemo.BuildConfig;
 import com.example.andy.andydemo.R;
 
@@ -36,7 +35,7 @@ public class BaseActivity extends Activity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ViewServer.get(this).addWindow(this);
+//        ViewServer.get(this).addWindow(this);
     }
 
     @Override
@@ -47,12 +46,12 @@ public class BaseActivity extends Activity {
 
     public void onResume() {
         super.onResume();
-        ViewServer.get(this).setFocusedWindow(this);
+//        ViewServer.get(this).setFocusedWindow(this);
     }
 
     public void onDestroy() {
         super.onDestroy();
-        ViewServer.get(this).removeWindow(this);
+//        ViewServer.get(this).removeWindow(this);
     }
 
     private void createDebugDrawer() {

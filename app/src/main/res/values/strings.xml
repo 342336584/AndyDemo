@@ -11,4 +11,5 @@
     <string name="debugdrawer"><b>Hello, <i>DebugDrawer!</i></b></string>
 
     <string name="activity_includemergeviewstubactivity">layout/<b>IncludeMergeViewStub</b></string>
+    <string name="title_activity_calc">ipc/CalcActivity</string>
 </resources>
