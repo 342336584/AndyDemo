@@ -72,6 +72,15 @@
                 <category android:name="android.intent.category.SAMPLE_CODE" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".event.touch.TouchEventHandle"
+            android:label="@string/event_toucheventactivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
 
         <service
             android:name=".ipc.ICalcService"
@@ -91,9 +100,27 @@
 
         <service
             android:name=".ipc.BookManagerService"
-            android:process=":remote"
             android:enabled="true"
-            android:exported="true"></service>
+            android:exported="true"
+            android:process=":remote" />
+
+        <activity android:name=".app.ActivityLaunchMode"
+            android:label="@string/activity_launchmode">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".app.MainActivity"
+            android:label="@string/activity_test">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

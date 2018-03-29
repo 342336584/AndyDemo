@@ -167,6 +167,15 @@ public class CalcActivity extends BaseActivity implements View.OnClickListener {
     public void onDestroy() {
         super.onDestroy();
         unbindService(mConn);
+
+        if (mIBookManager != null && mIBookManager.asBinder().isBinderAlive()){
+            Timber.d("unregister listener:" + mNewBookArrivedListener);
+            try {
+                mIBookManager.unregisterListener(mNewBookArrivedListener);
+            } catch (RemoteException e) {
+                e.printStackTrace();
+            }
+        }
         unbindService(mCustomDataConn);
     }
 }

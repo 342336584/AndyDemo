@@ -12,6 +12,7 @@ import com.example.andy.andydemo.R;
 
 import java.util.Arrays;
 
+import butterknife.ButterKnife;
 import io.palaima.debugdrawer.DebugDrawer;
 import io.palaima.debugdrawer.actions.ActionsModule;
 import io.palaima.debugdrawer.actions.ButtonAction;
@@ -36,6 +37,7 @@ public class BaseActivity extends Activity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 //        ViewServer.get(this).addWindow(this);
+        ButterKnife.bind(this);
     }
 
     @Override

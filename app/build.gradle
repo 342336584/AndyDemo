@@ -78,10 +78,14 @@ dependencies {
     //    implementation 'com.jakewharton:butterknife:8.8.1'
     //    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
     //    classpath 'com.jakewharton:butterknife-gradle-plugin:8.8.1'
+    
+
+    //    compile 'com.github.romainguy:ViewServer:0-SNAPSHOT'
+    compile 'com.jakewharton:butterknife:8.5.1'
     compile 'com.android.support:appcompat-v7:26.+'
     compile 'com.jakewharton.timber:timber:+'
-//    compile 'com.github.romainguy:ViewServer:0-SNAPSHOT'
     compile 'com.github.GrenderG:Toasty:1.2.8'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
 }

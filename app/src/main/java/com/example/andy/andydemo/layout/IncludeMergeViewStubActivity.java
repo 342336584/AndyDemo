@@ -8,6 +8,8 @@ import android.widget.Button;
 import com.example.andy.andydemo.R;
 import com.example.andy.andydemo.base.BaseActivity;
 
+import butterknife.BindView;
+import butterknife.OnClick;
 import es.dmoral.toasty.Toasty;
 
 /**
@@ -15,27 +17,18 @@ import es.dmoral.toasty.Toasty;
  */
 
 public class IncludeMergeViewStubActivity extends BaseActivity {
-    private Button btn_viewStub;
-    private ViewStub viewStub;
+
+    @BindView(R.id.btn_viewStub)
+    Button btn_viewStub;
+
+    @BindView(R.id.stub)
+    ViewStub viewStub;
 
     boolean isInflate = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_includemergeviewstub);
-
-        btn_viewStub=(Button)findViewById(R.id.btn_viewStub);
-        viewStub=(ViewStub) findViewById(R.id.stub);
-        btn_viewStub.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                if (!isInflate)
-                    viewStub.inflate();
-                else
-                    Toasty.info(getApplication(), "已经加载了").show();
-            }
-        });
+        super.onCreate(savedInstanceState);
 
         viewStub.setOnInflateListener(new ViewStub.OnInflateListener() {
             @Override
@@ -44,4 +37,13 @@ public class IncludeMergeViewStubActivity extends BaseActivity {
             }
         });
     }
+
+    @OnClick(R.id.btn_viewStub)
+    public void onClick(){
+        if (!isInflate)
+            viewStub.inflate();
+        else
+            Toasty.info(getApplication(), "已经加载了").show();
+    }
+
 }

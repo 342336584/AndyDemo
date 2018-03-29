@@ -4,6 +4,10 @@
     <string name="activity_hello_world">app/Activity/<b>Hello <i>World</i></b></string>
     <string name="hello_world"><b>Hello, <i>World!</i></b></string>
 
+    <string name="activity_launchmode">app/Activity/launchMode</string>
+
+    <string name="activity_test">app/Activity/test</string>
+
     <string name="activity_timber">log/<b>Timber</b></string>
     <string name="timber"><b>Hello, <i>Timber!</i></b></string>
 
@@ -12,4 +16,7 @@
 
     <string name="activity_includemergeviewstubactivity">layout/<b>IncludeMergeViewStub</b></string>
     <string name="title_activity_calc">ipc/CalcActivity</string>
+
+    <string name="event_toucheventactivity">event/<b>TouchEvent</b></string>
+    <string name="title_event_touchevent">event/TouchEventActivity</string>
 </resources>
