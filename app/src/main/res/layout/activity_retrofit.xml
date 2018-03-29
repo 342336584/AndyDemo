@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="各自的职责：
+        \nRetrofit 负责请求的数据和请求的结果，使用接口的方式呈现，
+        \nOkHttp 负责请求的过程，
+        \nRxJava 负责异步，各种线程之间的切换。"/>
+    <Button
+        android:id="@+id/movie_btn"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:text="@string/movie_list"
+        />
+
+    <Button
+        android:id="@+id/award_btn"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/award_list"
+        />
+</LinearLayout>

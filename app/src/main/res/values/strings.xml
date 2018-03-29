@@ -19,4 +19,11 @@
 
     <string name="event_toucheventactivity">event/<b>TouchEvent</b></string>
     <string name="title_event_touchevent">event/TouchEventActivity</string>
+
+
+    <string name="net_retrofitactivity">net/RetrofitRxJavaDemo</string>
+    <string name="net_movieactivity">RetrofitRxJavaDemo</string>
+    <string name="net_gankactivity">RetrofitRxJavaDemo</string>
+    <string name="movie_list">电影列表</string>
+    <string name="award_list">福利列表</string>
 </resources>
