@@ -122,7 +122,8 @@
                 <category android:name="android.intent.category.SAMPLE_CODE" />
             </intent-filter>
         </activity>
-        <activity android:name=".net.RetrofitActivity"
+        <activity
+            android:name=".net.RetrofitActivity"
             android:label="@string/net_retrofitactivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -130,13 +131,20 @@
                 <category android:name="android.intent.category.SAMPLE_CODE" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".net.movie.MovieActivity"
+            android:label="@string/net_movieactivity"></activity>
+        <activity
+            android:name=".net.gank.GankActivity"
+            android:label="@string/net_gankactivity"></activity>
+        <activity android:name=".net.H5InteractionActivity"
+            android:label="@string/h5_interaction_activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-        <activity android:name=".net.movie.MovieActivity"
-            android:label="@string/net_movieactivity">
-        </activity>
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
 
-        <activity android:name=".net.gank.GankActivity"
-            android:label="@string/net_gankactivity">
         </activity>
     </application>
 
