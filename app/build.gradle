@@ -80,9 +80,6 @@ dependencies {
     //    classpath 'com.jakewharton:butterknife-gradle-plugin:8.8.1'
 
     //    compile 'com.github.romainguy:ViewServer:0-SNAPSHOT'
-    
-
-    
 
     // 检测程序崩溃框架CustomActivityOnCrash
     compile 'com.jakewharton:butterknife:8.5.1'
@@ -102,4 +99,6 @@ dependencies {
     compile 'cat.ereza:customactivityoncrash:2.2.0'
     testCompile 'junit:junit:4.12'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
+
+    compile 'com.android.support:recyclerview-v7:26.+'
 }

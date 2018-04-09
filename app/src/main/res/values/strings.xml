@@ -28,4 +28,5 @@
     <string name="award_list">福利列表</string>
 
     <string name="h5_interaction_activity">net/H5InteractionDemo</string>
+    <string name="title_activity_request_php">net/RequestPHPActivity</string>
 </resources>
