@@ -9,11 +9,17 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        buildConfigField "String", "NAME", "\"" + NAME + "\""
+        resValue "string", "NAME", "\"" + NAME + "\""
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+
         }
     }
 }
@@ -23,6 +29,7 @@ boolean isDeveloperVersion() {
 }
 
 dependencies {
+    compile project(':thread')
     compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
@@ -76,7 +83,9 @@ dependencies {
         exclude group: 'com.android.support'
     }
     //    implementation 'com.jakewharton:butterknife:8.8.1'
+
     //    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+
     //    classpath 'com.jakewharton:butterknife-gradle-plugin:8.8.1'
 
     //    compile 'com.github.romainguy:ViewServer:0-SNAPSHOT'
@@ -99,6 +108,5 @@ dependencies {
     compile 'cat.ereza:customactivityoncrash:2.2.0'
     testCompile 'junit:junit:4.12'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
-
     compile 'com.android.support:recyclerview-v7:26.+'
 }
