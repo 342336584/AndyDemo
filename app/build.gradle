@@ -12,7 +12,19 @@ android {
 
         buildConfigField "String", "NAME", "\"" + NAME + "\""
         resValue "string", "NAME", "\"" + NAME + "\""
+
+        ndk {
+            moduleName "JniTest"
+            abiFilters "armeabi"
+        }
     }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs'] // 配置此处才会打包jni 的.so 文件
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -106,7 +118,7 @@ dependencies {
     compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
     compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.3'
     compile 'cat.ereza:customactivityoncrash:2.2.0'
+    compile 'com.android.support:recyclerview-v7:26.+'
     testCompile 'junit:junit:4.12'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
-    compile 'com.android.support:recyclerview-v7:26.+'
 }

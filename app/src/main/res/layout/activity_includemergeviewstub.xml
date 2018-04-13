@@ -33,6 +33,11 @@
                 layout="@layout/common_progress" />
         </FrameLayout>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tips_includemerge"/>
+
         <Button
             android:id="@+id/btn_viewStub"
             android:layout_width="wrap_content"

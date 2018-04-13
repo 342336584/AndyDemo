@@ -16,6 +16,8 @@
 
     <string name="activity_includemergeviewstubactivity">layout/<b>IncludeMergeViewStub</b></string>
     <string name="title_activity_calc">ipc/CalcActivity</string>
+    <string name="tips_includemerge">include布局重用\n
+        merge翻译成中文是合并的意思，在Android中通过使用merge能够减少视图的节点数，从而减少视图在绘制过程消耗的时间，达到提高UI性能的效果。</string>
 
     <string name="event_toucheventactivity">event/<b>TouchEvent</b></string>
     <string name="title_event_touchevent">event/TouchEventActivity</string>
@@ -29,4 +31,5 @@
 
     <string name="h5_interaction_activity">net/H5InteractionDemo</string>
     <string name="title_activity_request_php">net/RequestPHPActivity</string>
+    <string name="title_activity_jni__ndk">ndk/JNI_NDKActivity</string>
 </resources>
