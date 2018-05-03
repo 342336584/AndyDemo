@@ -13,9 +13,12 @@ android {
         buildConfigField "String", "NAME", "\"" + NAME + "\""
         resValue "string", "NAME", "\"" + NAME + "\""
 
+        renderscriptTargetApi 18
+        renderscriptSupportModeEnabled true
         ndk {
             moduleName "JniTest"
-            abiFilters "armeabi"
+            moduleName "ndkdemo"
+            abiFilters "armeabi", "armeabi-v7a", "x86", "mips"
         }
     }
 

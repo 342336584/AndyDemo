@@ -165,7 +165,16 @@
             </intent-filter>
         </activity>
         <activity android:name=".ndk.JNIActivity" />
-        <activity android:name=".ndk.NDKActivity"></activity>
+        <activity android:name=".ndk.NDKActivity" />
+        <activity
+            android:name=".rs.RSActivity"
+            android:label="@string/title_activity_rs">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
