@@ -2,6 +2,12 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 26
     buildToolsVersion '26.0.1'
+
+    aaptOptions {
+        cruncherEnabled = false
+        useNewCruncher = false
+    }
+
     defaultConfig {
         applicationId "com.example.andy.andydemo"
         minSdkVersion 21
@@ -122,6 +128,8 @@ dependencies {
     compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.3'
     compile 'cat.ereza:customactivityoncrash:2.2.0'
     compile 'com.android.support:recyclerview-v7:26.+'
+    // 图片控件，支持多点缩放
+    compile 'com.github.chrisbanes:PhotoView:2.1.3'
     testCompile 'junit:junit:4.12'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
 }

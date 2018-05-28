@@ -166,9 +166,48 @@
         </activity>
         <activity android:name=".ndk.JNIActivity" />
         <activity android:name=".ndk.NDKActivity" />
+        <!-- <activity -->
+        <!-- android:name=".rs.RSActivity" -->
+        <!-- android:label="@string/title_activity_rs"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+        <!-- <category android:name="android.intent.category.SAMPLE_CODE" /> -->
+        <!-- </intent-filter> -->
+        <!-- </activity> -->
         <activity
-            android:name=".rs.RSActivity"
-            android:label="@string/title_activity_rs">
+            android:name=".window.WindowDemoActivity"
+            android:label="@string/title_activity_window_demo"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".stat.StatActivity"
+            android:label="@string/title_activity_stat"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".log.UploadLogActivity"
+            android:label="@string/title_activity_upload_log">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".app.HandlerActivity"
+            android:label="@string/title_activity_handler">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

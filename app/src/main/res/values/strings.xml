@@ -10,6 +10,7 @@
 
     <string name="activity_timber">log/<b>Timber</b></string>
     <string name="timber"><b>Hello, <i>Timber!</i></b></string>
+    <string name="title_activity_upload_log">log/UploadLogActivity</string>
 
     <string name="activity_debugdrawer">debug/<b>DebugDrawer</b></string>
     <string name="debugdrawer"><b>Hello, <i>DebugDrawer!</i></b></string>
@@ -33,4 +34,91 @@
     <string name="title_activity_request_php">net/RequestPHPActivity</string>
     <string name="title_activity_jni__ndk">ndk/JNI_NDKActivity</string>
     <string name="title_activity_rs">rs/RSActivity</string>
+    <string name="title_activity_window_demo">window/WindowDemoActivity</string>
+    <string name="window_demo_detail">
+        \n- Dialog：当提示信息是至关重要的，并且必须要由用户做出决定才能继续的时候，使用Dialog。
+        \n- Toast：当提示信息只是告知用户某个事情发生了，用户不需要对这个事情做出响应的时候，使用Toast。
+        \n- Snackbar：以上两者之外的任何其他场景，Snackbar可能会是你最好的选择。
+        \n- PopupWindow：跟dialog差不多
+        \n
+        \n弹窗的分类：应用窗口，子窗口，系统窗口
+\n在Android中窗口是一个抽象的概念，每一个Activity就对应着一个窗口，而所有的窗口都是由视图（View）来呈现，而我们知道View构成的一个树形结构的视图就组成了一个Activity的界面了
+
+\n应用窗口：所谓应用窗口指的就是该窗口对应一个Activity，因此，要创建应用窗口就必须在Activity中完成了。
+\n子窗口：所谓子窗口指的是必须依附在某个父窗口之上。
+\n系统窗口：所谓系统窗口指的是由系统进程创建，不依赖于任何应用或者不依附在任何父窗口之上。
+\n窗口和窗口管理器类：Window，WindowManager
+    </string>
+    <string name="title_activity_stat">stat/StatActivity</string>
+    <string name="title_activity_stat_detail">
+        \n 百度统计
+        \n GrowingIO
+        \n umeng统计
+        \n 自定义统计-- 本地数据库，定时轮询上报
+        \n 用户画像
+        \n 1. 三方sdk
+        \n 2. 行业研报
+        \n 3. 3方调研
+        统计 = 统计 + 分析
+统计定义：通过对定点的数据采集，追踪用户行为（点击、浏览）给产品或者运营提供数据支持。
+意义：
+统计和分析流量来源、内容使用、用户属性和行为数据，以便APP进行产品、运营、推广策略的决策。
+
+核心数据：
+1. 日活
+2. 用户留存
+3. 版本分布
+4. 渠道分布
+5. 关键功能的使用情况
+
+统计分类：
+应用趋势
+新增用户、活跃用户、启动次数、版本分布、行业指标等数据，方便您从整体掌控应用的运营情况及增长动态。
+
+
+渠道分析
+各大应用市场，在哪里推广最有效？从哪里获取的用户最有价值？
+
+
+留存分析
+您可以掌握每日(周/月)的新增用户在初次使用后一段时间内的留存率，留存率的高低一定程度上反映了产品和用户质量的好坏。
+
+行为分析
+针对性地进行应用内的数据统计，了解用户的产品使用细节及行为特征，帮助寻找产品改进的突破点，评估产品优化的效果。
+
+用户属性
+用户的基本属性和行为特征，帮助全面了解用户。
+
+错误分析
+收集并归类崩溃日志，提供错误管理及分析工具，帮助开发者更好的解决问题，从而提高应用的稳定性，改善应用质量。
+
+
+统计
+用户行为分析 --- 3方统计：百度、极光、GrowingIO、Umeng、talking data、诸葛io
+
+
+
+埋点定义：通过对定点的数据采集，追踪用户用户行为（点击、浏览）给产品或者运营提供数据支持。
+埋点方式：
+客户端埋点
+	1、代码埋点：部署SDK后在需要采集的地方让技术添加代码，应用启动的时会初始化SDK，用户所有操作行为会调用SDK的相应数据接口然后把数据发送服务端（数据库）。
+		优点：数据准确性高，自定义程度高；
+		缺点：工作量大，投入人力物力比较大；
+		市面上产品有：GA（google analytics）、友盟、TalkingData
+	2、可视化埋点：无须进行添加代码，只需在相应应用界面追加事件数据点即可。核心代码与资源配置器分开，当启动应用时从服务端更新配置和资源，应用根据新的配置和资源发送数据。
+		优点：操作简单方便
+		缺点：不灵活，存在部分数据死角，同时每次启动加载服务端配置资源，消耗资源
+		市面上产品有：诸葛IO、神策
+	3、无埋点：并不是说不要埋点，而是SDk利用css选择器技术和监听控件的事件触发技术，在应用嵌入SDK，SDK会把用户的行为数据尽可能的采集下来。
+		优点：部署简单、收集数据多
+		缺点：不灵活数据属性，脏数据较多，同时网络传输压力大，消耗资源多
+		市面上产品有：Heap Analyitcs、Growing IO服务端埋点在后端将数据通过协议的方式传送，例如：MP协议、日志等。数据定义、采集工作量大，不太提倡这个，用此来埋点相当于开发一个工具框架，工作量太大，而且耗费人力物力。
+		--------------------------------------------------------------
+		我说一下埋点（代码埋点）的一些关键点吧，至于第三方统计平台可以参考：GA、友盟、 talking data、 腾讯数据平台等。
+
+		一、通用数据全量收集冷启动事件：App第一次启动时的，版本号、设备ID、渠道、内存使用情况，磁盘使用情况等信息前后台事件：App进入前台或者后台控件点击事件：某个控件（包括页面上控件和弹窗中控件）被用户点击列表浏览事件：某个列表的哪些条目被用户浏览了位置事件：上报用户地理位置信息其它事件：省略描述二、业务数据收集与具体业务相关的数据收集，这个需要根据实际业务来设定，然后把数据传过来。三、前端展现【用户数据展现】新增用户、活跃用户(DAU/WAU/MAU)、老用户、沉默用户、留存(次日/3日/7日...)、PV/UV...【行为数据】点击、停留时长、访问路径、登录次数、登录天数...
+        性能数据:访问页面性能( 页面打开性能 操作响应性能 )、不可用时长、事件量...
+        业务数据:根据不同业务有不同的业务数据，那移动端手游来说，会有：充值金额、充值人数、ARPU\ARPPU、LTV、ROI...
+</string>
+    <string name="title_activity_handler">app/Handler</string>
 </resources>

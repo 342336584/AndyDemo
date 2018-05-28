@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="vertical">
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autoLink="web"
+                android:text="https://www.jianshu.com/p/7340c3d4cec6" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Handler 工作流程浅析\n 异步通信准备 => 消息入队 => 消息循环 => 消息处理"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="1. 异步通信准备 \n
+                                假定是在主线程创建 Handler，则会直接在主线程中创建处理器对象 Looper、消息队列对象 MessageQueue 和 Handler 对象。需要注意的是，Looper 和 MessageQueue 均是属于其 创建线程 的。Looper 对象的创建一般通过 Looper.prepareMainLooper() 和 Looper.prepare() 两个方法，而创建 Looper 对象的同时，将会自动创建 MessageQueue，创建好 MessageQueue 后，Looper 将自动进入消息循环。此时，Handler 自动绑定了主线程的 Looper 和 MessageQueue"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="2. 消息入队 \n
+                                   工作线程通过 Handler 发送消息 Message 到消息队列 MessageQueue 中，消息内容一般是 UI 操作。发送消息一般都是通过 Handler.sendMessage(Message msg) 和 Handler.post(Runnabe r) 两个方法来进行的。而入队一般是通过 MessageQueue.enqueueeMessage(Message msg,long when) 来处理。" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="3. 消息循环 \n
+                                主要分为「消息出队」和「消息分发」两个步骤，Looper 会通过循环 取出 消息队列 MessageQueue 里面的消息 Message，并 分发 到创建该消息的处理者 Handler。如果消息循环过程中，消息队列 MessageQueue 为空队列的话，则线程阻塞。"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="4. 消息处理   \n
+                                Handler 接收到 Looper 发来的消息，开始进行处理。"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text=" \n\n 对于 Handler ，一些需要注意的地方
+                            \n 1 个线程 Thread 只能绑定 1个循环器 Looper，但可以有多个处理者 Handler
+                            \n  1 个循环器 Looper 可绑定多个处理者 Handler
+                            \n    1 个处理者 Handler 只能绑定 1 个 1 个循环器 Looper"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text=" \n\n Handler 发送消息的方式
+                            \n Handler.sendMessage(Message msg)
+                             \n Handler.post(Runnable r)"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/looper_prepare"
+                android:scaleType="center" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/new_looper"
+                android:scaleType="center" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/looper_loop"
+                android:scaleType="center" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/messagequeue_next"
+                android:scaleType="center" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/message_target"
+                android:scaleType="center" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/handler_dispatchmessage"
+                android:scaleType="center" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/message_obtain"
+                android:scaleType="center" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/handler_post"
+                android:scaleType="center" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/handler_getpostmessage"
+                android:scaleType="center" />
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/handler_sendmessage"
+                android:scaleType="center" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/handler_sendmessageattime"
+                android:scaleType="center" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/handler_enqueuemessage"
+                android:scaleType="center" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+</ScrollView>
+
+
