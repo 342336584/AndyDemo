@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".app.RxJavaActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/go"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Go" />
+
+        <Button
+            android:id="@+id/go2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Go2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="
+        \n
+        什么是RxJava
+        \n
+        RxJava本质上是一个异步操作库，是一个能让你用极其简洁的逻辑去处理繁琐复杂任务的异步事件库。
+                    \n
+                    Rx的全称是Reactive Extensions，直译过来就是响应式扩展。
+
+        \n\n\n
+        RxJava的基本元素
+    \n Observable：被观察者，事件源
+    \n Subscriber/Observer：观察者
+    \n OnSubscribe：一个接口类，是连接被观察者和观察者的桥梁，另外要说明的是onSubscribe是Observable的一个局部变量
+    \n
+        \n\n\n
+        使用步骤
+        \n 导包: 在build.gradle中导入如下：
+        \n
+ compile 'io.reactivex:rxandroid:1.2.0'
+\n  compile 'io.reactivex:rxjava:1.1.5'
+\n 创建 被观察者(Observerable)对象
+\n 创建 观察者 （Subscriber或者Observer）对象
+\n 通过订阅：把观察者和被观察者进行相互关联
+\n
+
+\n\n\n
+RxJava的操作符详解
+\n 创建操作：
+\n 创建Observable(被观察者)的操作符 create from just empty error never
+\n 变换操作符
+\n map : 所谓变换，就是将事件序列中的对象或整个序列进行加工处理，转换成不同的事件或事件序列。
+
+
+\n\n\n
+\n 关于异步（线程调度）Scheduler
+\n subscribeOn（）它指示Observable在一个指定的调度器上创建（只作用于被观察者创建阶段）。只能指定一次，如果指定多次则以第一次为准
+\n observeOn（）指定在事件传递（加工变换）和最终被处理（观察者）的发生在哪一个调度器。可指定多次，每次指定完都在下一步生效。
+" />
+
+        <com.github.chrisbanes.photoview.PhotoView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/rxjava" />
+
+    </LinearLayout>
+</ScrollView>

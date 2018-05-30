@@ -121,4 +121,7 @@
         业务数据:根据不同业务有不同的业务数据，那移动端手游来说，会有：充值金额、充值人数、ARPU\ARPPU、LTV、ROI...
 </string>
     <string name="title_activity_handler">app/Handler</string>
+    <string name="title_activity_rx_java">app/RxJava</string>
+
+    <string name="title_layout_shape">layout/shape</string>
 </resources>
