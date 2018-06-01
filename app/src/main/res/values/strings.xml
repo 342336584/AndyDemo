@@ -124,4 +124,5 @@
     <string name="title_activity_rx_java">app/RxJava</string>
 
     <string name="title_layout_shape">layout/shape</string>
+    <string name="title_activity_green_dao">db/greendao</string>
 </resources>

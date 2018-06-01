@@ -223,8 +223,18 @@
                 <category android:name="android.intent.category.SAMPLE_CODE" />
             </intent-filter>
         </activity>
-        <activity android:name=".layout.ShapeActivity"
+        <activity
+            android:name=".layout.ShapeActivity"
             android:label="@string/title_layout_shape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".db.GreenDaoActivity"
+            android:label="@string/title_activity_green_dao">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

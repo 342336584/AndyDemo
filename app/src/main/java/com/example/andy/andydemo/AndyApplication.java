@@ -2,6 +2,7 @@ package com.example.andy.andydemo;
 
 import android.app.Application;
 
+import com.example.andy.andydemo.db.MySQLiteOpenHelper;
 import com.nostra13.universalimageloader.cache.disc.impl.UnlimitedDiscCache;
 import com.nostra13.universalimageloader.cache.memory.impl.LruMemoryCache;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
@@ -22,15 +23,32 @@ public class AndyApplication extends Application {
     private static final int MEMORY_SIZE = 5 * 1024 * 1024;
     private static final int DISK_SIZE = 20 * 1024 * 1024;
 
+    static Application sApplication;
+
     @Override
     public void onCreate() {
         super.onCreate();
+
+        sApplication = this;
+
+        initDB();
 
         initTimber();
         initDebugDrawer();
 
         initNetConfig();
         initCustomerActivityonCrash();
+    }
+
+    private void initDB() {
+        MySQLiteOpenHelper.init();
+    }
+
+    /**
+     * 获取全局的ApplicationContext
+     */
+    public static Application getApplication() {
+        return sApplication;
     }
 
     private void initCustomerActivityonCrash() {
@@ -73,6 +91,8 @@ public class AndyApplication extends Application {
             Timber.plant(lumberYard.tree());
         }
     }
+
+
 
     private static class CrashReportingTree extends Timber.Tree {
         @Override
