@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".onecloud.KeyPointActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="\n
+            \n 固件模块： fdrawer、fmgr、tfmgr、sysmgr
+            \n
+                \n 文件归类模块 fdrawer
+\n  /fdrawer?opt=getimg
+\n 查询图片、视频、文件
+\n  getimg getvideo getfile searchfile newtag getfdinfo
+\n
+\n  文件管理模块 fmgr
+\n   /fmgr?opt=r_mkdir
+\n  文件操作
+\n  r_mkdir delfile rename upload
+\n
+\n  设备管理协议 sysmgr/tfmgr
+\n  /sysmgr?opt=mnt func=reboot
+\n  重启设备、分区信息
+\n  opt=mnt func=reboot  opt=mnt func=get_partitions  opt=listpeer
+            \n   "/>
+
+</LinearLayout>

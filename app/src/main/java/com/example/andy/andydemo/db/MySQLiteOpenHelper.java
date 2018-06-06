@@ -5,9 +5,13 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 
 import com.example.andy.andydemo.AndyApplication;
+import com.example.andy.andydemo.sys.Version;
 import com.github.yuweiguocn.library.greendao.MigrationHelper;
 
 import org.greenrobot.greendao.database.Database;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MySQLiteOpenHelper extends DaoMaster.OpenHelper {
 
@@ -30,6 +34,36 @@ public class MySQLiteOpenHelper extends DaoMaster.OpenHelper {
         super(context, name, factory);
     }
 
+    @Override
+    public void onCreate(Database db) {
+        super.onCreate(db);
+        initVersion(db);
+    }
+
+    private void initVersion(Database db) {
+        List<Version> mVersion = new ArrayList<>();
+        mVersion.add(new Version("平台版本", "api", "VERSION_CODE", "说明"));
+        mVersion.add(new Version("Android 8.1", "27", "Oreo", ""));
+        mVersion.add(new Version("Android 8", "26", "Oreo", ""));
+        mVersion.add(new Version("Android 7.1", "25", "Nougat", ""));
+        mVersion.add(new Version("Android 7.0", "24", "Nougat", ""));
+        mVersion.add(new Version("Android 6.0", "23", "Marshmallow", ""));
+        mVersion.add(new Version("Android 5.1", "22", "LOLLIPOP_MR1", ""));
+        mVersion.add(new Version("Android 5.0", "21", "LOLLIPOP", ""));
+        mVersion.add(new Version("Android 4.4W", "20", "KITKAT_WATCH", ""));
+        mVersion.add(new Version("Android 4.4", "19", "KITKAT", ""));
+        mVersion.add(new Version("Android 4.3", "18", "JELLY_BEAN_MR2", ""));
+        mVersion.add(new Version("Android 4.2/4.2.2", "17", "JELLY_BEAN_MR1", ""));
+        mVersion.add(new Version("Android 4.1/4.1.1", "16", "JELLY_BEAN", ""));
+
+        if (mDaoMaster == null)
+            mDaoMaster = new DaoMaster(db);
+
+        if (mDaoSession == null)
+            mDaoSession = mDaoMaster.newSession();
+
+        mDaoSession.getVersionDao().insertInTx(mVersion);
+    }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
@@ -45,12 +79,17 @@ public class MySQLiteOpenHelper extends DaoMaster.OpenHelper {
 
 
     public static void init(){
+        SQLiteDatabase db = null;
         if (sDBHelper == null) {
             sDBHelper = new MySQLiteOpenHelper(AndyApplication.getApplication(), DATABASE_FOLDER_NAME, null);
-            SQLiteDatabase db = sDBHelper.getWritableDatabase();
-            mDaoMaster = new DaoMaster(db);
-            mDaoSession = mDaoMaster.newSession();
+            db = sDBHelper.getWritableDatabase();
         }
+
+        if (mDaoMaster == null)
+            mDaoMaster = new DaoMaster(db);
+
+        if (mDaoSession == null)
+        mDaoSession = mDaoMaster.newSession();
     }
 
 

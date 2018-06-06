@@ -32,6 +32,10 @@ public class GreenDaoActivity extends BaseActivity {
 
     @OnClick(R.id.query)
     public void clickQuery(){
+        if (mUserDao == null){
+            mUserDao = MySQLiteOpenHelper.getmDaoSession().getUserDao();
+        }
+
         List<User> users = mUserDao.queryRaw("");
         if (users == null)
             return;

@@ -1,1 +1,1 @@
-include ':app', ':thread'
+include ':app', ':thread', ':tableLayout'

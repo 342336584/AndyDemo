@@ -1,4 +1,3 @@
-
 apply plugin: 'org.greenrobot.greendao'
 apply plugin: 'com.android.application'
 
@@ -55,6 +54,7 @@ boolean isDeveloperVersion() {
 
 dependencies {
     compile project(':thread')
+    compile project(':tableLayout')
     compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
