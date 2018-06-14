@@ -127,4 +127,6 @@
     <string name="title_activity_green_dao">db/greendao</string>
     <string name="title_activity_version">sys/version</string>
     <string name="title_activity_key_point">onecloud/keypoint</string>
+    <string name="title_activity_selector">layout/selector</string>
+    <string name="title_activity_tcp">net/protocol/tcp</string>
 </resources>
