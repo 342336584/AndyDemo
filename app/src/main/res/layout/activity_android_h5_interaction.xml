@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<android.support.constraint.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".net.AndroidH5InteractionActivity">
+
+    <TextView
+        android:id="@+id/topic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="\n    本篇的主要功能点：
+\n    1、webView如何加载H5页面
+\n    2、Android如何调用H5中的方法
+\n    3、H5如何调用Android中的方法
+\n    "/>
+
+    <TextView
+        android:id="@+id/loudh5_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1、webview如何加载H5页面"
+        app:layout_constraintTop_toBottomOf="@+id/topic"/>
+
+    <com.github.chrisbanes.photoview.PhotoView
+        android:id="@+id/loudh5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/loudh5_tips"
+        android:src="@drawable/loadh5"/>
+
+    <TextView
+        android:id="@+id/android_loudh5_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="\n 2、Android如何调用H5中的方法**
+\n  2.1 想要调用js方法那么就必须让webView支持JS
+\n  2.2 调用H5中无参无返回值的方法***
+\n  2.3 调用H5中带返回值的方法***
+\n  2.3 调用H5中带参数的方法***
+\n  "
+        app:layout_constraintTop_toBottomOf="@+id/loudh5"/>
+
+    <com.github.chrisbanes.photoview.PhotoView
+        android:id="@+id/android_loudh5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/android_loudh5_tips"
+        android:src="@drawable/websetjs"/>
+
+    <com.github.chrisbanes.photoview.PhotoView
+        android:id="@+id/callh501"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/android_loudh5"
+        android:src="@drawable/callh501"/>
+
+    <com.github.chrisbanes.photoview.PhotoView
+        android:id="@+id/callh502"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/callh501"
+        android:src="@drawable/callh502"/>
+
+    <com.github.chrisbanes.photoview.PhotoView
+        android:id="@+id/callh503"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/callh502"
+        android:src="@drawable/callh503"/>
+
+    <TextView
+        android:id="@+id/callandroid_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/callh503"
+        android:text="\n
+\n  3.H5如何调用android中的方法
+\n"/>
+
+    <com.github.chrisbanes.photoview.PhotoView
+        android:id="@+id/callandroid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/callandroid_tips"
+        android:src="@drawable/callandroid"/>
+
+</android.support.constraint.ConstraintLayout>
+</ScrollView>

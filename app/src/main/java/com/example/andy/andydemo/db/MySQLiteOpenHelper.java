@@ -43,18 +43,18 @@ public class MySQLiteOpenHelper extends DaoMaster.OpenHelper {
     private void initVersion(Database db) {
         List<Version> mVersion = new ArrayList<>();
         mVersion.add(new Version("平台版本", "api", "VERSION_CODE", "说明"));
-        mVersion.add(new Version("Android 8.1", "27", "Oreo", ""));
-        mVersion.add(new Version("Android 8", "26", "Oreo", ""));
-        mVersion.add(new Version("Android 7.1", "25", "Nougat", ""));
-        mVersion.add(new Version("Android 7.0", "24", "Nougat", ""));
-        mVersion.add(new Version("Android 6.0", "23", "Marshmallow", ""));
-        mVersion.add(new Version("Android 5.1", "22", "LOLLIPOP_MR1", ""));
-        mVersion.add(new Version("Android 5.0", "21", "LOLLIPOP", ""));
+        mVersion.add(new Version("Android 8.1", "27", "Oreo", "奥利奥"));
+        mVersion.add(new Version("Android 8", "26", "Oreo", "奥利奥"));
+        mVersion.add(new Version("Android 7.1", "25", "Nougat", "牛轧糖"));
+        mVersion.add(new Version("Android 7.0", "24", "Nougat", "牛轧糖"));
+        mVersion.add(new Version("Android 6.0", "23", "Marshmallow", "棉花糖"));
+        mVersion.add(new Version("Android 5.1", "22", "LOLLIPOP_MR1", "棒棒糖"));
+        mVersion.add(new Version("Android 5.0", "21", "LOLLIPOP", "棒棒糖"));
         mVersion.add(new Version("Android 4.4W", "20", "KITKAT_WATCH", ""));
-        mVersion.add(new Version("Android 4.4", "19", "KITKAT", ""));
-        mVersion.add(new Version("Android 4.3", "18", "JELLY_BEAN_MR2", ""));
-        mVersion.add(new Version("Android 4.2/4.2.2", "17", "JELLY_BEAN_MR1", ""));
-        mVersion.add(new Version("Android 4.1/4.1.1", "16", "JELLY_BEAN", ""));
+        mVersion.add(new Version("Android 4.4", "19", "KITKAT", "巧克力棒"));
+        mVersion.add(new Version("Android 4.3", "18", "JELLY_BEAN_MR2", "糖豆"));
+        mVersion.add(new Version("Android 4.2/4.2.2", "17", "JELLY_BEAN_MR1", "糖豆"));
+        mVersion.add(new Version("Android 4.1/4.1.1", "16", "JELLY_BEAN", "糖豆"));
 
         if (mDaoMaster == null)
             mDaoMaster = new DaoMaster(db);

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".net.WebViewActivity">
+
+    <com.github.chrisbanes.photoview.PhotoView
+        android:id="@+id/web_map"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/webview"/>
+
+    <TextView
+        android:id="@+id/webview_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/web_map"
+        android:text="WebView是一个基于webkit引擎、展现web页面的控件。
+        \n  一定要申请网络权限"/>
+
+    <com.github.chrisbanes.photoview.PhotoView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/webview_tips"
+        app:layout_constraintTop_toBottomOf="@+id/webview_tip"/>
+
+</android.support.constraint.ConstraintLayout>

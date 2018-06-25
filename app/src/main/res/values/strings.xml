@@ -129,4 +129,9 @@
     <string name="title_activity_key_point">onecloud/keypoint</string>
     <string name="title_activity_selector">layout/selector</string>
     <string name="title_activity_tcp">net/protocol/tcp</string>
+    <string name="title_activity_http">net/protocol/http</string>
+    <string name="title_activity_constraint">layout/constraint</string>
+    <string name="title_activity_context">app/context</string>
+    <string name="title_activity_android_h5_interaction">net/androidh5interaction</string>
+    <string name="title_activity_web_view">net/webview</string>
 </resources>
