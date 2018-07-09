@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.github.chrisbanes.photoview.PhotoView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="400dp"
+            android:src="@drawable/data_struction_main" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="
+\n  Collection
+\n  1.list （ArrayList ，LinkedList（频繁插入删除的时候用），Vector（线程安全，也表示效率低），Stack（先进后出））
+\n  2.set （HashSet（无序，根据哈希值查找Entry），TreeSet（需要排序的时候用），LinkedHashSet（有序、有序迭代的时候用） ）
+\n  Map
+\n  1.TreeMap（需要排序的时候用）
+\n  2.HashMap（无序，根据key的哈希值查找Entry，concurrentHashMap（线程安全）），LinkedHashMap（有序、有序迭代的时候用），HashTable（线程安全）
+\n
+\n  ArrayList：数组集合，无容量限制，非线程安全
+\n  LinkedList：基于双向列表的机制，插入创建一个Entry对象，并切换前后元素引用，非线程安全
+\n                 相对于ArrayList，其优势：add，remove较快，因为只需要操作前后元素，而ArrayList需要操作整个列表； 缺点：get，set较慢以为ArrayList是有序的，LinkedList需要整个遍历
+\n  Vector：同ArrayList类似，最大区别是线程安全，还有自动扩充机制为2倍（ArrayList1.5倍）
+\n  Stack：继承自Vector，压栈，后进先出（push，pop。peek）
+\n
+\n  所有HashSet都是在加入的时候，先从对象中hashcode一个值，然后通过这个值加入到Set中
+\n  HashSet：基于HashMap实现，非线程安全，能存一个null（哈希表通过使用散列表的形式来存贮信息，集合内元素没有特定顺序，且随时会变）
+\n  TreeSet：（SortedSet）基于TreeMap实现 ，key需要实现comparator，实现排序；   相对于HashSet：支持排序
+\n  LinkedHashSet：根据哈希值来判断元素存贮的位置，同时使用链表来维护元素之前的顺序，所以他是有序的
+\n   优势：迭代速度比HashSet好，插入删除查（因为需要维护前后元素的关系）
+\n  HashMap：根据数组的中hash码，查找Entry在另外一个数组中的位置，遍历用iterator
+\n  HashTable：线程安全，不允许null，便利用enumeration
+\n  TreeMap：能排序的map
+\n  LinkedHashMap：相对于HashMap，插入的时候有序，所以排序的时候
+"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="
+\n  4、Iterator 和iterable区别
+\n  Iterator是迭代器类，而Iterable是接口,任何实现iterable接口的类都可以使用迭代器进行遍历。
+\n  Iterator的功能：
+\n  1、使用iterator()方法要求返回一个iterator
+\n  2、使用next() 获得序列中下一个元素
+\n  3、使用hasNext()检查序列中是否还有元素
+\n  4、使用remove删除迭代器新近返回的元素
+"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="
+\n  5、Collection和Collections区别
+\n  java.util.Collection 是一个集合接口。它提供了对集合对象进行基本操作的通用接口方法。Collection接口在Java 类库中有很多具体的实现。
+\n  java.util.Collections 是一个包装类。它包含有各种有关集合操作的静态多态方法。此类不能实例化，就像一个工具类，服务于Java的Collection框架。
+"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="
+\n  6、Comparable和Comparator的区别
+\n  Comparable可以认为是一个内比较器，实现了Comparable接口的类有一个特点，就是这些类是可以和自己比较的，至于具体和另一个实现了Comparable接口的类如何比较，则依赖compareTo方法的实现，compareTo方法也被称为自然比较方法。如果开发者add进入一个Collection的对象想要Collections的sort方法帮你自动进行排序的话，那么这个对象必须实现Comparable接口。compareTo方法的返回值是int，有三种情况：正整数、0、负整数(小的在前面显示，大的在后面显示)
+\n  Comparator可以认为是是一个外比较器，有两种情况可以使用实现Comparator接口的方式：
+\n  6.1、一个对象不支持自己和自己比较（没有实现Comparable接口），但是又想对两个对象进行比较
+\n  6.2、一个对象实现了Comparable接口，但是开发者认为compareTo方法中的比较方式并不是自己想要的那种比较方式
+\n  Comparator接口里面有一个compare方法，方法有两个参数T o1和T o2，是泛型的表示方式，分别表示待比较的两个对象，方法返回值和Comparable接口一样是int，有三种情况：正整数、0、负整数(小的在前面显示，大的在后面显示)
+"/>
+
+    </LinearLayout>
+</ScrollView>

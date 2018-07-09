@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".thread.JVMActivity">
+
+        <TextView
+            android:id="@+id/jvm_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="
+\n  在开头我们先来了解下2个概念：
+\n  JVM
+\n  JVM (Java Virtual Machine) Java虚拟机模型。主要描述的是Java虚拟机内部的结构以及各个结构之间的关系，负责将 java 文件编译成 class 文件并运行 class 文件
+\n  JMM
+\n  JMM (Java Memory Model) Java内存模型。定义了Java 虚拟机(JVM)在计算机内存(RAM)中的工作方式，线程之间内存刷新的关系，是隶属于JVM的
+\n  简单来说，JVM可以理解为 java 执行的一个操作系统，而操作系统的内存模型就是 JVM
+\n  " />
+
+        <com.github.chrisbanes.photoview.PhotoView
+            android:id="@+id/jvm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/jvm_title"
+            android:src="@drawable/jvm"/>
+
+        <com.github.chrisbanes.photoview.PhotoView
+            android:id="@+id/stack_heap01"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/jvm"
+            android:src="@drawable/stack_heap01"/>
+
+        <com.github.chrisbanes.photoview.PhotoView
+            android:id="@+id/stack_heap02"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/stack_heap01"
+            android:src="@drawable/stack_heap02"/>
+
+        <TextView
+            android:id="@+id/op_data_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/stack_heap02"
+            android:text="
+\n  线程处理数据的顺序：
+\n  这里指引用对象
+\n  习惯上我们把 堆内存 称为主内存
+\n  1.Thread 对象把要处理的对象从主内存中 copy 一份到当前线程所在的栈内存中
+\n  2.假如这个处理耗时2秒，那么2秒后更新栈内存中这个对象的数据副本
+\n  3.最后把栈内存中对象的数据副本再写回到主内存中，我们称之为：刷新到主内存
+\n  "/>
+
+        <com.github.chrisbanes.photoview.PhotoView
+            android:id="@+id/thread_data_op"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/op_data_title"
+            android:src="@drawable/thread_data_op"/>
+
+        <TextView
+            android:id="@+id/cpu_memory_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/thread_data_op"
+            android:text="
+\n  硬件层面内存模型
+\n  上文书说到 java 的内存模型不光收到 JAVA 底层影响，更是受到硬件影响
+\n  现在的 CPU 都有多个核心，每个核心都有自己的寄存器和高速缓存器
+\n  CPU 在处理对象时，和线程一样会把对象 Copy 一份放到自己的 cache 中，然后先修改自己 cache 中的对象数据副本，然后再刷新回主内存中。
+\n  我们可以把 CPU 的寄存器，高速缓存看成另一个线程中的栈内存，都是会产生数据同步问题的，这样就好理解了。
+\n  下图是一个简化的现代计算机硬件结构图"/>
+
+        <com.github.chrisbanes.photoview.PhotoView
+            android:id="@+id/cpu_memory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/cpu_memory_title"
+            android:src="@drawable/cpu_memory"/>
+
+        <com.github.chrisbanes.photoview.PhotoView
+            android:id="@+id/jvm_computer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/cpu_memory"
+            android:src="@drawable/jvm_computer"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/jvm_computer"
+            android:text="
+            \n  好了内存模型了解到这里就差不多了，我们知道了不管是线程中的栈内存空间还是 CPU 的寄存器和高速缓存都会操作从主内存的copy 的数据副本，因时间差和多线程，多 CPU 核心同时操作同一个对象数据，会产生数据错乱的数据同步问题。大家了解了多线程数据不同步产生的根本原因，那么本篇的内容就算是达到目的了，知道了为什么我们才好有的放矢不是。
+"/>
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

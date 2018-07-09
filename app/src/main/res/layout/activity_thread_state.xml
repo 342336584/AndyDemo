@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".thread.ThreadStateActivity">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="
+\n  线程的实现
+\n  1.继承 Thread 类
+\n  2.实现 Runnable 接口
+\n  3.Callable、Future、FutureTask、线程池ExecutorService
+\n  " />
+
+        <com.github.chrisbanes.photoview.PhotoView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/callable_thread"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="好了 Callable、Future、FutureTask 就先说到这里，下面这个例子是 Callable、Future 在线程池中执行的例子，这个才是最常用的需求"/>
+
+        <com.github.chrisbanes.photoview.PhotoView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/callable_executor"/>
+
+        <com.github.chrisbanes.photoview.PhotoView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/thread_state"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="
+\n  synchronized同步 volatile
+\n  synchronized 本身是一个关键字，用来修饰普通方法，静态方法和代码块; 管理对象上锁，只给一个线程对象，保证同一时刻只有一个线程能操作这个对象
+\n  volatile 也是一个关键字，修饰变量的，volatile 的特性有4个： 保证可见性 、 非同步、保证有序性、 不保证原子性
+"/>
+
+    </LinearLayout>
+
+</ScrollView>

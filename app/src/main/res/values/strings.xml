@@ -134,4 +134,12 @@
     <string name="title_activity_context">app/context</string>
     <string name="title_activity_android_h5_interaction">net/androidh5interaction</string>
     <string name="title_activity_web_view">net/webview</string>
+    <string name="title_activity_thread">thread/main</string>
+    <string name="title_activity_jvm">thread/jvm</string>
+    <string name="title_activity_thread_state">thread/state</string>
+    <string name="title_activity_exception">java/exception</string>
+    <string name="title_activity_data_type">java/datatype</string>
+    <string name="title_activity_data_structure">java/datastructure</string>
+    <string name="title_activity_live">live/miu_xinyu</string>
+    <string name="title_activity_connection">onecloud/connection</string>
 </resources>

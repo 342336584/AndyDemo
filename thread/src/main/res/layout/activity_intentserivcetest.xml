@@ -1,64 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btn_task1"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="开始任务1"/>
-
-    <Button
-        android:id="@+id/btn_task2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="开始任务2"/>
-
-    <RelativeLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <ProgressBar
-            android:id="@+id/pb_task1"
-            android:layout_toLeftOf="@+id/tv_pb1"
-            android:layout_marginRight="5dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"/>
-        <TextView
-            android:id="@+id/tv_pb1"
-            android:gravity="center"
-            android:layout_alignParentRight="true"
-            android:layout_width="40dp"
-            android:layout_height="wrap_content"/>
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <ProgressBar
-            android:id="@+id/pb_task2"
-            android:layout_toLeftOf="@+id/tv_pb2"
-            android:layout_marginRight="5dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"/>
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <TextView
-            android:id="@+id/tv_pb2"
-            android:gravity="center"
-            android:layout_alignParentRight="true"
-            android:layout_width="40dp"
-            android:layout_height="wrap_content"/>
-    </RelativeLayout>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我们来看看android 上著名的一次性 Service IntentService ，
+\n  IntentService 自带一个线程，内部使用 HandlerThread 提供多线程服务。android 里面除了 AsyncTask ，其他的多线程基本都是用的 handle 、 looper 消息来做的，IntentService 也不例外啊，这样我们更容易理解源码。
+" />
 
-    <TextView
-        android:text="更新状态"
-        android:id="@+id/tv_info_count"
-        android:layout_marginTop="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        <com.github.chrisbanes.photoview.PhotoView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/intent_service_demo"/>
 
-</LinearLayout>
+        <com.github.chrisbanes.photoview.PhotoView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/intent_service"/>
+
+        <Button
+            android:id="@+id/btn_task1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="开始任务1" />
+
+        <Button
+            android:id="@+id/btn_task2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="开始任务2" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ProgressBar
+                android:id="@+id/pb_task1"
+                style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/tv_pb1" />
+
+            <TextView
+                android:id="@+id/tv_pb1"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="center" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ProgressBar
+                android:id="@+id/pb_task2"
+                style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/tv_pb2" />
+
+            <TextView
+                android:id="@+id/tv_pb2"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="center" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_info_count"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="更新状态" />
+
+    </LinearLayout>
+</ScrollView>

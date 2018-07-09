@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".thread.ThreadActivity">
+
+        <TextView
+            android:id="@+id/thread_web"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autoLink="web"
+            android:text="https://www.jianshu.com/p/52d752dac4aa"/>
+
+        <com.github.chrisbanes.photoview.PhotoView
+            android:id="@+id/java_thread_map"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/thread_web"
+            android:src="@drawable/java_thread_map" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="
+\n  在 Android 开发中实现多线程操作，常用方法主要有：
+\n  继承Thread类
+\n  实现Runnable接口
+\n  实现callable 接口
+\n  Handler
+\n  HandlerThread
+\n  IntentService
+\n  AsyncTask
+\n  "
+            app:layout_constraintTop_toBottomOf="@+id/java_thread_map" />
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>
