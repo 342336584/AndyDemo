@@ -142,4 +142,7 @@
     <string name="title_activity_data_structure">java/datastructure</string>
     <string name="title_activity_live">live/miu_xinyu</string>
     <string name="title_activity_connection">onecloud/connection</string>
+    <string name="title_activity_protocol">net/protocol/main</string>
+    <string name="title_activity_socket">net/protocol/socket</string>
+    <string name="title_activity_algorithm">java/algorithm</string>
 </resources>

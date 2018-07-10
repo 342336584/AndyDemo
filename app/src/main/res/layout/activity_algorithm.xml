@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".java.AlgorithmActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.github.chrisbanes.photoview.PhotoView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/algorithm_main" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="
+\n  冒泡排序算法的运作如下：（从后往前）
+\n  1.比较相邻的元素。如果第一个比第二个大，就交换他们两个。
+\n  2.对每一对相邻元素作同样的工作，从开始第一对到结尾的最后一对。在这一点，最后的元素应该会是最大的数。
+\n  3.针对所有的元素重复以上的步骤，除了最后一个。
+\n  4.持续每次对越来越少的元素重复上面的步骤，直到没有任何一对数字需要比较。
+" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="
+\n
+\n  快速排序：
+\n  1.我们在左边开始的地方标记为 i ,右边为 j ,然后因为 i 的位置已经是我们的参考值了，所以从 j 那边开始移动，
+\n  2.因为我们的目标是左边的数是比参考值小，右边的比参考值大，所以从 j 开始往左移动，当找到一个比5小的数字，然后停住，
+\n  3.然后 i 从左边开始往右移动，然后找到比参考值大的数，然后停住，
+\n  4.交换 i 跟 j 指向的数
+\n  5.重复 2,3,4 直到 i 跟 j 重合（比如index为h的地方），然后交换我们的参考值跟这个 h 交换数据。
+" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="
+\n \n 直接插入排序：
+\n  默认把第一个数字当做是排好序的数组（一个数字当然是排好序的），然后每次后一个跟前面的进行比较排序，然后重复。
+" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="
+\n \n 希尔排序：
+\n  是直接插入排序算法的一种更高效的改进版本。
+\n  我们假设现在是1-6个数字，我们取数组的 数量/2 为间隔数（ps:所以为6/2 = 3），然后按照这个间隔数分别分组：
+\n  这样我们可以当场有三组数组{3,4,}，{1,6}，{5,2}
+\n  然后对每组数组使用直接插入排序。然后我们把间隔数再除以2（PS:为 3/2 = 1,取为1）。
+\n  然后再使用直接插入排序就可以得到最后的结果了。
+"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="
+\n \n 选择排序：
+\n  每次遍历，找出最小的一个放在前面（或者最大的一个放在后面），然后接着把剩下的再遍历一个个的找出来排序。
+" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="
+\n  归并算法
+\n  归并算法，指的是将两个顺序序列合并成一个顺序序列的方法。
+\n  比如有数列{6，202，100，301，38，8，1}
+\n  初始状态：6,202,100,301,38,8,1
+\n  第一次归并后：{6,202},{100,301},{8,38},{1}，比较次数：3；
+\n  第二次归并后：{6,100,202,301}，{1,8,38}，比较次数：4；
+\n  第三次归并后：{1,6,8,38,100,202,301},比较次数：4；
+"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="
+\n \n外部排序：
+\n  一般来说外排序分为两个步骤：预处理和合并排序。
+\n  首先，根据可用内存的大小，将外存上含有n个纪录的文件分成若干长度为t的子文件（或段）；
+\n  其次，利用内部排序的方法，对每个子文件的t个纪录进行内部排序。
+\n  这些经过排序的子文件（段）通常称为顺串(run)，顺串生成后即将其写入外存。这样在外存上就得到了m个顺串（m=[n/t]）。
+\n  最后，对这些顺串进行归并，使顺串的长度逐渐增大，直到所有的待排序的记录成为一个顺串为止。
+"/>
+    </LinearLayout>
+
+</ScrollView>

@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -10,7 +8,33 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="
+app配置智能硬件方式
+\n  1.最开始的红外线交互
+\n  2.BLE交互(蓝牙低能耗技术),现在基本用的是蓝牙4.0
+\n  3.nfc交互（近距离无线通讯技术）, 苹果支付你知道了吧, 将你手机放过去感应一下,滴滴滴..就付款了,就是利用了这个技术, 信息就是通过nfc交互的
+\n  4.在各式各样的硬件上植入软ap,再利用手机连接软ap配置路由的ssid和密码, 然后智能硬件就可以自行连接了路由器了,也就实现了上网的功能.硬件中的软ap连接路由器后,通过我们自己的服务器处理,手机通过4G网络也能够控制智能硬件了.
+\n  5.Smart Config
+\n  利用了UDP协议与,智能硬件wifi模块中monitor模式, 其实和上面第四部的操作大致雷同, 不一样的地方在于,手机端填写好ssid和密码之后,不断发送udp广播包,智能硬件通过接收这些udp传输的包内数据知道ssid和密码,然后自动连接上路由器
+\n  6, 声波配置
+\n  这种方式现在应用挺广的，支付宝，等都有应用，其主要的原理就是手机放出经过编码加密的声音，智能硬件通过麦克风录音，解码解密，然后配置成功。接着就和上述基本类似
+\n
+"/>
+
+        <com.github.chrisbanes.photoview.PhotoView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="400dp"
+            android:src="@drawable/hardware_connection_sap" />
+
+        <com.github.chrisbanes.photoview.PhotoView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="400dp"
+            android:src="@drawable/hardware_connection_udp" />
 
     </LinearLayout>
 </ScrollView>

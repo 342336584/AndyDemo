@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".onecloud.KeyPointActivity">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="\n
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".onecloud.KeyPointActivity">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="\n
             \n 固件模块： fdrawer、fmgr、tfmgr、sysmgr
             \n
                 \n 文件归类模块 fdrawer
@@ -26,6 +30,17 @@
 \n  /sysmgr?opt=mnt func=reboot
 \n  重启设备、分区信息
 \n  opt=mnt func=reboot  opt=mnt func=get_partitions  opt=listpeer
-            \n   "/>
 
-</LinearLayout>
+\n 近场发现-- 远场、近场
+\n udp发送广播，有回应就表示有近场
+" />
+
+        <com.github.chrisbanes.photoview.PhotoView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="300dp"
+            android:src="@drawable/onecloud_search" />
+
+    </LinearLayout>
+
+</ScrollView>

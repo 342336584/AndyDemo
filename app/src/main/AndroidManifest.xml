@@ -387,7 +387,40 @@
         </activity>
         <activity
             android:name=".onecloud.ConnectionActivity"
-            android:label="@string/title_activity_connection"></activity>
+            android:label="@string/title_activity_connection">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".net.protocol.ProtocolActivity"
+            android:label="@string/title_activity_protocol">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".net.protocol.SocketActivity"
+            android:label="@string/title_activity_socket">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".java.AlgorithmActivity"
+            android:label="@string/title_activity_algorithm">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="
+\n  1.1什么是Socket Socket
+\n  是一种抽象层，应用程序通过它来发送和接收数据，使用Socket可以将应用程序添加到网络中，与处于同一网络中的其他应用程序进行通信。简单来说，Socket提供了程序内部与外界通信的端口并为通信双方的提供了数据传输通道。
+\n  1.2Socket的分类
+\n  根据不同的的底层协议，Socket的实现是多样化的。本指南中只介绍TCP/IP协议族的内容，在这个协议族当中主要的Socket类型为流套接字（streamsocket）和数据报套接字(datagramsocket)。流套接字将TCP作为其端对端协议，提供了一个可信赖的字节流服务。数据报套接字使用UDP协议，提供数据打包发送服务。
+"/>
+
+        <com.github.chrisbanes.photoview.PhotoView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="400dp"
+            android:src="@drawable/net_programme"/>
+
+        <com.github.chrisbanes.photoview.PhotoView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="400dp"
+            android:src="@drawable/net_socket_programme"/>
+
+        <com.github.chrisbanes.photoview.PhotoView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="400dp"
+            android:src="@drawable/socket_tcp" />
+
+        <com.github.chrisbanes.photoview.PhotoView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="400dp"
+            android:src="@drawable/net_programme_socket_tcp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="以上是基于tcp的socket编程
+\n 以下是基于udp的socket编程"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="
+\n  Android之Socket的基于UDP传输
+\n  接收方创建步骤：
+\n  		1.  创建一个DatagramSocket对象，并指定监听的端口号
+\n  			DatagramSocket socket = new  DatagramSocket (4567);
+\n  		2. 创建一个byte数组用于接收
+\n  			byte data[] = new byte[1024];
+\n  		3. 创建一个空的DatagramPackage对象
+\n  			 DatagramPackage package = new DatagramPackage(data , data.length);
+\n  		4. 使用receive方法接收发送方所发送的数据,同时这也是一个阻塞的方法
+\n  			socket.receive(package);
+\n  		5. 得到发送过来的数据
+\n  			new String(package.getData() , package.getOffset() , package.getLength());
+\n  发送方创建步骤：
+\n  		1.  创建一个DatagramSocket对象
+\n			DatagramSocket socket = new  DatagramSocket (4567);
+\n  		2.  创建一个 InetAddress ， 相当于是地址
+\n  			InetAddress serverAddress = InetAddress.getByName(ip);
+\n  		3.  这是随意发送一个数据
+\n  			String str = string;
+\n  		4.  转为byte类型
+\n  			byte data[] = str.getBytes();
+\n   		5.  创建一个DatagramPacket 对象，并指定要讲这个数据包发送到网络当中的哪个地址，以及端口号
+\n  			DatagramPacket  package = new DatagramPacket (data , data.length , serverAddress , 4567);
+\n  		6.  调用DatagramSocket对象的send方法 发送数据
+\n  			 socket . send(package);
+"/>
+
+    </LinearLayout>
+</ScrollView>
