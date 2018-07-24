@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fragment，简称碎片
+\n Fragment是依赖于Activity的，不能独立存在的。
+\n 一个Activity里可以有多个Fragment。
+\n 一个Fragment可以被多个Activity重用。
+\n Fragment有自己的生命周期，并能接收输入事件。
+\n 我们能在Activity运行时动态地添加或删除Fragment。
+\n
+\n
+\n  1.Fragment的基本使用
+\n  (1)将Fragment当作控件使用
+\n  (2)FragmentManager动态加载Fragment
+\n  "/>
+
+        <com.github.chrisbanes.photoview.PhotoView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="300dp"
+            android:src="@drawable/fragment"/>
+
+        <com.github.chrisbanes.photoview.PhotoView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="300dp"
+            android:src="@drawable/activity_fragment"/>
+
+    </LinearLayout>
+</ScrollView>

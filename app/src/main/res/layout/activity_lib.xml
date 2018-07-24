@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="
+\n EventBus
+\n 能够简化各组件间的通信，让我们的代码书写变得简单，能有效的分离事件发送方和接收方(也就是解耦的意思)，
+能避免复杂和容易出错的依赖性和生命周期问题。
+\n 三要素
+\n Event 事件。它可以是任意类型。
+\n Subscriber 事件订阅者。在EventBus3.0之前我们必须定义以onEvent开头的那几个方法，分别是onEvent、onEventMainThread、onEventBackgroundThread和onEventAsync，而在3.0之后事件处理的方法名可以随意取，不过需要加上注解@subscribe()，并且指定线程模型，默认是POSTING。
+\n Publisher 事件的发布者。我们可以在任意线程里发布事件，一般情况下，使用EventBus.getDefault()就可以得到一个EventBus对象，然后再调用post(Object)方法即可。
+" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="
+        \n Retrofit
+        \n OkHttp的封装，是一个网络加载框架。
+        " />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="
+        \n support.v4
+        \n SwipeRefreshLayout：下拉刷新，只允许有一个直接子类
+        \n Fragment 碎片，视图
+        \n NestedScrollView 嵌套滚动视图
+        \n LocalBroadcastManager 在同一个应用内的不同组件间发送Broadcast
+        \n
+        \n
+        " />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="
+\n ButterKnife
+\n OkHttp的封装，是一个网络加载框架。
+" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="
+\n GreenDAO
+\n OkHttp的封装，是一个网络加载框架。
+" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="
+\n Dagger2
+\n dagger2是一个基于Java依赖注入标准的依赖注入框架，在编译期间自动生成代码，负责依赖对象的创建。
+\n Dagger2框架以Component中定义的方法作为入口，到目标类中寻找JSR-330定义的@Inject标注，生成一系列提供依赖的Factory类和注入依赖的Injector类。
+而Component则是联系Factory和Injector，最终完成依赖的注入。
+" />
+
+        <com.github.chrisbanes.photoview.PhotoView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="300dp"
+            android:src="@drawable/dagger2_inject_component" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="
+\n dataBinding
+\n OkHttp的封装，是一个网络加载框架。
+" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="
+\n Room
+\n OkHttp的封装，是一个网络加载框架。
+" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="
+\n RxJava2
+\n OkHttp的封装，是一个网络加载框架。
+" />
+    </LinearLayout>
+</ScrollView>

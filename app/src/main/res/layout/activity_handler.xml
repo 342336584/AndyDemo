@@ -23,6 +23,14 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="
+                \n
+                \n Handler 是什么
+\n 是android给我们提供用来更新UI新的一套机制，也是一套消息处理的机制，我们可以发送消息，也可以通过它处理消息"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="Handler 工作流程浅析\n 异步通信准备 => 消息入队 => 消息循环 => 消息处理"/>
 
             <TextView

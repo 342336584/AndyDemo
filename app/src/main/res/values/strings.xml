@@ -145,4 +145,10 @@
     <string name="title_activity_protocol">net/protocol/main</string>
     <string name="title_activity_socket">net/protocol/socket</string>
     <string name="title_activity_algorithm">java/algorithm</string>
+    <string name="title_activity_pattern">pattern/mvp</string>
+    <string name="title_activity_view_custom">layout/view_custom</string>
+    <string name="title_activity_lib">pattern/lib</string>
+    <string name="title_activity_mvvm">pattern/mvvm</string>
+    <string name="title_activity_fragment_demo">app/fragment</string>
+    <string name="title_activity_dagger2_demo">demo/dagger2</string>
 </resources>

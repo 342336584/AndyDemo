@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="
+\n  0、项目添加dagger2支持；
+\n  1、最简单不带 Module 的 Inject 方式；
+\n  2、带 Module 的 Inject 方式；
+\n  3、Component 依赖 Component（a、dependence方式；b1、subComponent方式）；
+\n        3.1、遗漏的：b2——subComponent方式
+\n  4、Scope 作用域——单例；
+\n  5、总结；
+\n  6、扩展的dagger.android最新api。
+\n  "/>
+
+</LinearLayout>

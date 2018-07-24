@@ -140,6 +140,12 @@ dependencies {
     // greendao
     compile 'org.greenrobot:greendao:3.2.2'
     compile 'com.github.yuweiguocn:GreenDaoUpgradeHelper:v1.4.0'
+
+    // dependency injection
+    implementation "com.google.dagger:dagger:2.14.1"
+    annotationProcessor "com.google.dagger:dagger-compiler:2.14.1"
+    annotationProcessor "com.google.dagger:dagger-android-processor:2.14.1"
+    implementation "com.google.dagger:dagger-android-support:2.14.1"
 }
 
 greendao {

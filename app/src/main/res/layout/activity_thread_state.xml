@@ -48,7 +48,7 @@
             android:text="
 \n  synchronized同步 volatile
 \n  synchronized 本身是一个关键字，用来修饰普通方法，静态方法和代码块; 管理对象上锁，只给一个线程对象，保证同一时刻只有一个线程能操作这个对象
-\n  volatile 也是一个关键字，修饰变量的，volatile 的特性有4个： 保证可见性 、 非同步、保证有序性、 不保证原子性
+\n  volatile 也是一个关键字，修饰变量的，volatile 的特性有4个： 保证可见性（存储在公共内存堆中） 、 非同步、保证有序性、 不保证原子性
 "/>
 
     </LinearLayout>
