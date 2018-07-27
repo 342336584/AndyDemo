@@ -126,7 +126,7 @@
     <string name="title_layout_shape">layout/shape</string>
     <string name="title_activity_green_dao">db/greendao</string>
     <string name="title_activity_version">sys/version</string>
-    <string name="title_activity_key_point">onecloud/keypoint</string>
+    <string name="title_activity_key_point">project/onecloud/keypoint</string>
     <string name="title_activity_selector">layout/selector</string>
     <string name="title_activity_tcp">net/protocol/tcp</string>
     <string name="title_activity_http">net/protocol/http</string>
@@ -140,8 +140,8 @@
     <string name="title_activity_exception">java/exception</string>
     <string name="title_activity_data_type">java/datatype</string>
     <string name="title_activity_data_structure">java/datastructure</string>
-    <string name="title_activity_live">live/miu_xinyu</string>
-    <string name="title_activity_connection">onecloud/connection</string>
+    <string name="title_activity_live">project/live/miu_xinyu</string>
+    <string name="title_activity_connection">project/onecloud/connection</string>
     <string name="title_activity_protocol">net/protocol/main</string>
     <string name="title_activity_socket">net/protocol/socket</string>
     <string name="title_activity_algorithm">java/algorithm</string>
@@ -151,4 +151,5 @@
     <string name="title_activity_mvvm">pattern/mvvm</string>
     <string name="title_activity_fragment_demo">app/fragment</string>
     <string name="title_activity_dagger2_demo">demo/dagger2</string>
+    <string name="title_activity_onemall">project/onemall</string>
 </resources>

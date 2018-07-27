@@ -118,6 +118,7 @@ dependencies {
     // 检测程序崩溃框架CustomActivityOnCrash
     compile 'com.jakewharton:butterknife:8.5.1'
     compile 'com.android.support:appcompat-v7:26.+'
+    compile "com.android.support:support-v4:27.0.0"
     compile 'com.jakewharton.timber:timber:+'
     compile 'com.github.GrenderG:Toasty:1.2.8'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'

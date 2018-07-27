@@ -251,7 +251,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".onecloud.KeyPointActivity"
+            android:name=".project.onecloud.KeyPointActivity"
             android:label="@string/title_activity_key_point">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -377,7 +377,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".live_miu_xinyu.LiveActivity"
+            android:name=".project.live_miu_xinyu.LiveActivity"
             android:label="@string/title_activity_live">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -386,7 +386,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".onecloud.ConnectionActivity"
+            android:name=".project.onecloud.ConnectionActivity"
             android:label="@string/title_activity_connection">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -469,6 +469,15 @@
         <activity
             android:name=".demo.Dagger2DemoActivity"
             android:label="@string/title_activity_dagger2_demo">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".project.onemall.OnemallActivity"
+            android:label="@string/title_activity_onemall">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

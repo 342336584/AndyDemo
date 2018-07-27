@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="
+\n 签名
+\n jks是在studio里面生成的签名证书,
+\n keystore是eclipse里面生成的.
+\n "/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="
+\n  代码规范
+\n  checkstyle帮助开发者实现常用JAVA代码规范的自动化检查。
+\n  findbugs是一个分析bytecode并找出其中可疑部分的一个工具。比如性能，多线程安全等等。
+\n  PMD也是一个静态代码分析工具，它主要用来分析一些常见问题。
+\n  "/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="
+\n 使用MVVM架构，基于：Dagger2, Room, RxJava2, OkHttp3 and PlaceholderView
+\n 模板：https://github.com/MindorksOpenSource/android-mvvm-architecture
+\n 注：尽量使用Dagger2注入，ARouter跳转界面，让代码完全解耦！
+\n 代码相关帮助文档：
+\n data: It contains all the data accessing and manipulating components.
+\n di: Dependency providing classes using Dagger2.
+\n ui: View classes along with their corresponding ViewModel.
+\n utils: Utility classes.
+\n 1.数据库的相关目录：
+    net.onething.onemall.data.local.db
+\n 2.Preferences的相关目录：
+    net.onething.onemall.data.local.prefs
+\n 3.网络请求的相关目录：
+    net.onething.onemall.data.remote
+\n 4.常量类：
+    net.onething.onemall.utils.AppConstants
+\n 5.功能模块：
+    net.onething.onemall.ui.mvvm
+\n 6.自定义View：
+    net.onething.onemall.ui.custom
+\n 应用的Application： net.onething.onemall.AppApplication
+\n 获取应用全局Context方法：使用 @Inject 注入 (net.onething.onemall.di.module.AppModule.provideContext)
+\n 继承基类：net.onething.onemall.ui.base
+
+\n 输出log，统一使用AppLogger类
+
+\n 打包：执行 ./gradlew resguardRelease 或者 gradlew.bat resguardRelease
+\n "/>
+
+    </LinearLayout>
+</ScrollView>

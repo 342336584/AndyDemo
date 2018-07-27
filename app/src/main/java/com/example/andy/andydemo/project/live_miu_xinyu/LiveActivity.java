@@ -1,4 +1,4 @@
-package com.example.andy.andydemo.live_miu_xinyu;
+package com.example.andy.andydemo.project.live_miu_xinyu;
 
 import android.os.Bundle;
 
